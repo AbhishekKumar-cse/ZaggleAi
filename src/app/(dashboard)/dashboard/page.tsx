@@ -10,7 +10,8 @@ import {
   Target, 
   Clock,
   RefreshCcw,
-  Bot
+  Bot,
+  ChevronRight
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -28,6 +29,7 @@ import {
 } from "recharts"
 import { generateCfoMorningBrief } from "@/ai/flows/ai-generated-cfo-morning-brief"
 import { KPI_DATA, DEPARTMENT_SPEND, CATEGORY_SPEND } from "@/lib/mock-data"
+import { cn } from "@/lib/utils"
 
 export default function DashboardPage() {
   const [brief, setBrief] = React.useState("")
@@ -256,5 +258,3 @@ function ActivityItem({ agent, action, status }: any) {
     </div>
   )
 }
-
-import { ChevronRight } from "lucide-react"
